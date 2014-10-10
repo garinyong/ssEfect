@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE9F0F2119E7F0C4000549BE /* mjViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F0F2019E7F0C4000549BE /* mjViewController.swift */; };
 		EECAFC6E19D55D9A0077AE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECAFC6D19D55D9A0077AE57 /* AppDelegate.swift */; };
 		EECAFC7019D55D9A0077AE57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECAFC6F19D55D9A0077AE57 /* ViewController.swift */; };
 		EECAFC7519D55D9A0077AE57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECAFC7419D55D9A0077AE57 /* Images.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE9F0F2019E7F0C4000549BE /* mjViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mjViewController.swift; sourceTree = "<group>"; };
 		EECAFC6819D55D9A0077AE57 /* ssEfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssEfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECAFC6C19D55D9A0077AE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EECAFC6D19D55D9A0077AE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				EECAFC6D19D55D9A0077AE57 /* AppDelegate.swift */,
+				EE9F0F2019E7F0C4000549BE /* mjViewController.swift */,
 				EECAFC6F19D55D9A0077AE57 /* ViewController.swift */,
 				EECAFC8D19D581F20077AE57 /* ccMapViewController.swift */,
 				EECAFC7419D55D9A0077AE57 /* Images.xcassets */,
@@ -144,6 +147,7 @@
 				EECAFC7019D55D9A0077AE57 /* ViewController.swift in Sources */,
 				EECAFC8E19D581F20077AE57 /* ccMapViewController.swift in Sources */,
 				EECAFC6E19D55D9A0077AE57 /* AppDelegate.swift in Sources */,
+				EE9F0F2119E7F0C4000549BE /* mjViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +260,7 @@
 				INFOPLIST_FILE = ssEfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "48b96bf1-3c62-47cb-81d3-39c5471e89f8";
 			};
 			name = Debug;
 		};
@@ -263,6 +268,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -270,6 +277,7 @@
 				INFOPLIST_FILE = ssEfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "48b96bf1-3c62-47cb-81d3-39c5471e89f8";
 			};
 			name = Release;
 		};

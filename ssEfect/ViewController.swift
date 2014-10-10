@@ -71,7 +71,7 @@ class ViewController: UIViewController,UIScrollViewDelegate
     {
         let curContentOffset = scrollView.contentOffset.y;
         
-        if (curContentOffset<0)
+        if curContentOffset < 0
         {
             secondaryViewController.view.center = CGPointMake(smallWindowView.center.x,smallWindowView.center.y-abs(curContentOffset)*0.3);
         }
@@ -97,14 +97,14 @@ class ViewController: UIViewController,UIScrollViewDelegate
         {
             if abs(endDraggingContentOffset - begingContentOffset) > maxDistance
             {
-                self.excXiaHua(true)
+                excXiaHua(true)
             }
         }
         else
         {
             if abs(endDraggingContentOffset - begingContentOffset) > maxDistance
             {
-                self.excXiaHua(false)
+                excXiaHua(false)
             }
         }
     }
@@ -113,7 +113,7 @@ class ViewController: UIViewController,UIScrollViewDelegate
     {
         let xiaJuli = self.view.bounds.size.height - imgViewHeight;
         
-        if(isXiaHua)
+        if isXiaHua
         {
             contentView.setContentOffset(CGPointMake(0, -xiaJuli), animated: true)
         }

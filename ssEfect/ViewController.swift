@@ -26,27 +26,27 @@ class ViewController: UIViewController,UIScrollViewDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.view.backgroundColor = UIColor.whiteColor();
+        self.view.backgroundColor = UIColor.white;
         
-        showImgView = UIImageView(frame: CGRectMake(0, 0, self.view.bounds.size.width,imgViewHeight))
-        showImgView.center = CGPointMake(showImgView.center.x,(66 + imgViewHeight)/2)
+        showImgView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width,height: imgViewHeight))
+        showImgView.center = CGPoint(x: showImgView.center.x,y: (66 + imgViewHeight)/2)
         showImgView.image = UIImage(named: "123.png")
-        showImgView.backgroundColor = UIColor.clearColor();
-        showImgView.contentMode = UIViewContentMode.Center;
+        showImgView.backgroundColor = UIColor.clear;
+        showImgView.contentMode = UIViewContentMode.center;
         self.view.addSubview(showImgView)
         
         contentView = UIScrollView(frame: self.view.bounds)
-        contentView.contentSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.height + overScreenHeight)
+        contentView.contentSize = CGSize(width: self.view.bounds.size.width, height: self.view.bounds.height + overScreenHeight)
         contentView.delegate = self
         contentView.scrollsToTop = false
         self.view.addSubview(contentView)
         
         //图的下半部分，自由构造，此处放了一个视差效果的地图
-        detailView = UIView(frame: CGRectMake(0, imgViewHeight, self.view.bounds.width, self.view.bounds.size.height - imgViewHeight + overScreenHeight))
+        detailView = UIView(frame: CGRect(x: 0, y: imgViewHeight, width: self.view.bounds.width, height: self.view.bounds.size.height - imgViewHeight + overScreenHeight))
         detailView.backgroundColor = UIColor(red: 89/255.0, green: 136/255.0, blue: 120/255.0, alpha: 1)
         contentView .addSubview(detailView)
         
-        smallWindowView = UIView(frame: CGRectMake(0, 30, self.view.bounds.size.width, 200))
+        smallWindowView = UIView(frame: CGRect(x: 0, y: 30, width: self.view.bounds.size.width, height: 200))
         smallWindowView.clipsToBounds = true
         detailView.addSubview(smallWindowView)
         
@@ -62,28 +62,28 @@ class ViewController: UIViewController,UIScrollViewDelegate
     
     //scrollview delegate
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView)
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView)
     {
         begingContentOffset = scrollView.contentOffset.y;
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView)
+    func scrollViewDidScroll(_ scrollView: UIScrollView)
     {
         let curContentOffset = scrollView.contentOffset.y;
         
         if curContentOffset < 0
         {
-            secondaryViewController.view.center = CGPointMake(smallWindowView.center.x,smallWindowView.center.y-abs(curContentOffset)*0.3);
+            secondaryViewController.view.center = CGPoint(x: smallWindowView.center.x,y: smallWindowView.center.y-abs(curContentOffset)*0.3);
         }
         else
         {
-            secondaryViewController.view.center = CGPointMake(smallWindowView.center.x,smallWindowView.center.y+abs(curContentOffset)*0.3);
+            secondaryViewController.view.center = CGPoint(x: smallWindowView.center.x,y: smallWindowView.center.y+abs(curContentOffset)*0.3);
         }
         
-        showImgView.center = CGPointMake(showImgView.center.x, (66 + imgViewHeight - curContentOffset)/2);
+        showImgView.center = CGPoint(x: showImgView.center.x, y: (66 + imgViewHeight - curContentOffset)/2);
     }
     
-    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         
         let endDraggingContentOffset = scrollView.contentOffset.y;
         
@@ -109,17 +109,17 @@ class ViewController: UIViewController,UIScrollViewDelegate
         }
     }
     
-    func excXiaHua(isXiaHua : Bool)
+    func excXiaHua(_ isXiaHua : Bool)
     {
         let xiaJuli = self.view.bounds.size.height - imgViewHeight;
         
         if isXiaHua
         {
-            contentView.setContentOffset(CGPointMake(0, -xiaJuli), animated: true)
+            contentView.setContentOffset(CGPoint(x: 0, y: -xiaJuli), animated: true)
         }
         else
         {
-            contentView.setContentOffset(CGPointZero, animated: true)
+            contentView.setContentOffset(CGPoint.zero, animated: true)
         }
     }
 }

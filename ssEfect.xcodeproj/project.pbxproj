@@ -106,6 +106,7 @@
 				TargetAttributes = {
 					EECAFC6719D55D9A0077AE57 = {
 						CreatedOnToolsVersion = 6.0.1;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -261,6 +262,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "48b96bf1-3c62-47cb-81d3-39c5471e89f8";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -278,6 +280,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "48b96bf1-3c62-47cb-81d3-39c5471e89f8";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -19,7 +19,7 @@ class ccMapViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         mapView = MKMapView(frame: self.view.bounds)
-        mapView.scrollEnabled = false
+        mapView.isScrollEnabled = false
         let ann = MKPointAnnotation()
         ann.coordinate = CLLocationCoordinate2DMake(23.134844, 113.317290)
 //        mapView.showsUserLocation = true;

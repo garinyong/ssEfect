@@ -20,22 +20,22 @@ class mjViewController: UIViewController,UIScrollViewDelegate {
         
         self.automaticallyAdjustsScrollViewInsets = false
         
-        contentView = UIScrollView(frame: CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height))
-        contentView.contentSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height + 300)
+        contentView = UIScrollView(frame: CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        contentView.contentSize = CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height + 300)
         contentView.delegate = self
-        contentView.backgroundColor = UIColor.yellowColor()
+        contentView.backgroundColor = UIColor.yellow
         contentView.alwaysBounceVertical = true
         self.view.addSubview(contentView)
         
-        self.view.backgroundColor = UIColor.greenColor()
+        self.view.backgroundColor = UIColor.green
         
         setContentView()
     }
     
     func setContentView()
     {
-        let downView = UIView(frame: CGRectMake(0, 300, self.view.bounds.size.width, contentView.contentSize.height - 300 - 64))
-        downView.backgroundColor = UIColor.blueColor()
+        let downView = UIView(frame: CGRect(x: 0, y: 300, width: self.view.bounds.size.width, height: contentView.contentSize.height - 300 - 64))
+        downView.backgroundColor = UIColor.blue
         downView.alpha = 1;
         contentView .addSubview(downView)
     }
